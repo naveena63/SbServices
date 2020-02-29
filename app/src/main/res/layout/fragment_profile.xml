@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/profileBackground"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/editiImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/upload"
+            app:civ_border_width="0.5dp" />
+
+
+    </RelativeLayout>
+
+
+    <include layout="@layout/content_profile" />
+
+</LinearLayout>
+    </FrameLayout>
+</LinearLayout>
+

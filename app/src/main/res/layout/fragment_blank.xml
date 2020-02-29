@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileCircleImageView"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/user_dp" />
+
+                <com.app.sb.sbservices.Utils.ClanProTextView
+                    android:id="@+id/usernameTextView"
+                    style="@style/viewParent.headerText"
+                    android:layout_marginTop="24dp"
+                    android:layout_toRightOf="@id/profileCircleImageView"
+                    android:textSize="18sp" />
+
+                <com.app.sb.sbservices.Utils.ClanProTextView
+                    android:id="@+id/userEmail"
+                    style="@style/viewParent.headerText"
+                    android:layout_below="@id/usernameTextView"
+                    android:layout_toRightOf="@id/profileCircleImageView"
+                    android:text=""
+                    android:textColor="#5D5C5C"
+                    android:textSize="16sp" />
+
+                <!--<ImageView
+                    android:id="@+id/imageviewArrow"
+                    style="@style/viewParent"
+                    android:src="@drawable/ic_more"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+
+                    android:layout_centerVertical="true"/>-->
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.LinearLayoutCompat
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/editprofilemenu" />
+
+                <com.app.sb.sbservices.Utils.ClanProTextView
+                    android:id="@+id/editProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="20dp"
+                    android:text="Edit Profile"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <View style="@style/proifleDetailsView" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/myWallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/wallet" />
+
+                <com.app.sb.sbservices.Utils.ClanProTextView
+                    android:id="@+id/earnCredits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="20dp"
+                    android:text="My Wallet"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <View style="@style/proifleDetailsView" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/rewards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/referid" />
+
+                <com.app.sb.sbservices.Utils.ClanProTextView
+                    android:id="@+id/referealId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="20dp"
+                    android:text="Referal Id"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+
+                    />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <View style="@style/proifleDetailsView" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/Faqs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/faqs" />
+
+                <com.app.sb.sbservices.Utils.ClanProTextView
+                    android:id="@+id/faqs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="20dp"
+                    android:text="Faqs"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+
+                    />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <View style="@style/proifleDetailsView" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/helps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/help" />
+
+                <com.app.sb.sbservices.Utils.ClanProTextView
+                    android:id="@+id/help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="20dp"
+                    android:text="Help"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+
+                    />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <View style="@style/proifleDetailsView" />
+
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/rateUss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/rating" />
+
+                <com.app.sb.sbservices.Utils.ClanProTextView
+                    android:id="@+id/rateUs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="20dp"
+                    android:text="Rate Us Our App"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+
+                    />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <View style="@style/proifleDetailsView" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/privacyPolicyy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/privacy_policy" />
+
+                <com.app.sb.sbservices.Utils.ClanProTextView
+                    android:id="@+id/privacyPolicy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="20dp"
+                    android:text="privacyPolicy"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+
+                    />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <View style="@style/proifleDetailsView" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/term"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/privacy_policy" />
+
+                <com.app.sb.sbservices.Utils.ClanProTextView
+                    android:id="@+id/terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="20dp"
+                    android:text="Terms And Conditions"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+
+                    />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <View style="@style/proifleDetailsView" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/logoutt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/log_out" />
+
+                <com.app.sb.sbservices.Utils.ClanProTextView
+                    android:id="@+id/logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="20dp"
+                    android:text="Logout"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+
+                    />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <TextView
+                style="@style/viewParent.headerText.settingsMiniTitle"
+                android:text="App ver 1.1"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+</ScrollView>
+
+</FrameLayout>
+
+

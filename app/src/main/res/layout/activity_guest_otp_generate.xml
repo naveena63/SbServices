@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GuestOtpGenerateActivity">
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/imageArrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_arrow_back_black_24dp">
+
+        </ImageView>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        app:hintEnabled="false">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/enterOtp"
+            android:textSize="@dimen/dimen_15dp"
+
+            android:layout_height="wrap_content"
+            android:hint="Enter Otp" />
+
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        android:id="@+id/submitOtpButn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="submit"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:background="@drawable/another_button_background"
+        />
+        <TextView
+            android:id="@+id/resendOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resend Otp"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+    </LinearLayout>
+</LinearLayout>

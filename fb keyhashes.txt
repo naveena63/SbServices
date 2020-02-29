@@ -1,0 +1,9 @@
+clint id
+491467032433-redhu37taohtie3umtv5no0f5gd9lfb8.apps.googleusercontent.com
+
+client scret id
+
+BGd924UlBAfAFWM-JWzHejIb
+      
+keytool -exportcert -alias androiddebugkey -keystore "C:\Users\Administrator\.android\debug.keystore"| "D:\openssl\bin\openssl" sha1 -binary | "D:\openssl\bin\openssl" base64
+D05kP8R4/X4ChmuOYzkie6XIzpQ=

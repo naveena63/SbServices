@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.app.sb.sbservices">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <permission  android:name="android.permission.INTERNET"></permission>
+
+
+    <uses-permission
+        android:name="android.permission.CLEAR_APP_CACHE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.MEDIA_CONTENT_CONTROL"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:windowSoftInputMode="adjustResize">
+        <activity android:name=".DescriptionActivity.MainActivity"></activity>
+        <activity android:name=".Menu.FqsActivity" />
+        <activity android:name=".Menu.PrivacypolicyActivity" />
+        <activity android:name=".Profile.ProfileActivity" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity android:name=".DescriptionActivity.TabwithViewpager" />
+        <activity android:name=".GuestOtpGenerateActivity" />
+        <activity android:name=".GuestOtpActivity" />
+        <activity android:name=".ViewMoreServicesActivity" />
+        <activity android:name=".DescriptionActivity.DescrptionMainActivity" />
+        <activity android:name=".GuestLoginActivity" />
+        <activity android:name=".InvoiceActivity" />
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".MyFcmTextMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".User.LoginActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="instamojo.orderauth.url"
+            android:value="https://sbservices.in/api/cart/access_token" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".User.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BottomNavActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".User.OTPActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Location.LocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".User.ForgotPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".User.VerifyForgotOtpActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".User.ChangePasswordActivity" />
+        <activity
+            android:name=".Packages.PackagesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TimeAndDate.TimesoltActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Cart.CartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReferalId.GetReferalCode"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Menu.ContactUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Menu.TermsAndConditionsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Menu.RateUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Payment.PaymentOptionsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Payment.StatusPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReferalId.EarnCreditsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Notifications.NotificationsActicity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Orders.ViewOrderActivity" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+    </application>
+
+</manifest>

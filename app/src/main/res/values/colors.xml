@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#03A9F4</color>
+    <color name="colorPrimaryDark">#2196F3</color>
+    <color name="colorAccent">#000000</color>
+    <color name="red">#dd0d7b</color>
+    <color name="grey">#aeaaaa</color>
+    <color name="primaryTextColor">#4d4d4d</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#0d0d0d</color>
+    <color name="button_green">#5fc73b</color>
+    <color name="contentBodyColor">#FCFCFC</color>
+    <color name="imageBorderColor">#E01E7A</color>
+    <color name="contentTextColor">#020000</color>
+    <color name="profileBackground">#fff</color>
+    <color name="miniTitle">#2A2E43</color>
+    <color name="profileAccentColor">#F7F7F7</color>
+    <color name="colorSelected">#B17E7E</color>
+    <color name="colorNormal">#2196F3</color>
+</resources>

@@ -1,0 +1,122 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/fragment_profile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <com.app.sb.sbservices.Utils.ClanProTextView
+            style="@style/headerText"
+            android:text="Account Info"
+            android:layout_marginBottom="20dp"/>
+
+        <RelativeLayout style="@style/profileDetailsLayout">
+            <ImageView
+                android:id="@+id/nameImageView"
+                android:src="@drawable/menu_profile"
+                style="@style/profileDetailsImage" />
+
+            <com.app.sb.sbservices.Utils.ClanProTextView
+                android:id="@+id/nameTextView"
+                style="@style/profileDetailsTextMain"
+                android:layout_toRightOf="@id/nameImageView"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/et_name"
+               android:hint="Edit your Name here"
+                android:background="@null"
+                android:layout_toRightOf="@id/nameImageView"
+                style="@style/profileDetailsMiniText" />
+
+        </RelativeLayout>
+
+        <View style="@style/proifleDetailsView" />
+        <RelativeLayout style="@style/profileDetailsLayout">
+            <ImageView
+                android:id="@+id/mobileImageView"
+                android:src="@drawable/menu_mobile"
+                style="@style/profileDetailsImage" />
+
+            <com.app.sb.sbservices.Utils.ClanProTextView
+                android:text="Mobile"
+                android:layout_toRightOf="@id/mobileImageView"
+                style="@style/profileDetailsTextMain"/>
+
+            <EditText
+               android:hint="edit your Phonenumber Here"
+                android:layout_toRightOf="@id/mobileImageView"
+                android:id="@+id/et_mobile"
+                android:background="@null"
+                style="@style/profileDetailsMiniText" />
+
+        </RelativeLayout>
+
+        <View style="@style/proifleDetailsView" />
+        <RelativeLayout style="@style/profileDetailsLayout">
+            <ImageView
+                android:id="@+id/emailImageView"
+                android:src="@drawable/menu_email"
+                style="@style/profileDetailsImage" />
+
+            <com.app.sb.sbservices.Utils.ClanProTextView
+                android:text="Email"
+                android:layout_toRightOf="@id/emailImageView"
+                style="@style/profileDetailsTextMain" />
+
+            <EditText
+                android:id="@+id/et_email"
+
+                android:background="@null"
+                android:hint="Edit your Email here"
+                android:layout_toRightOf="@id/emailImageView"
+                style="@style/profileDetailsMiniText" />
+
+        </RelativeLayout>
+
+        <View style="@style/proifleDetailsView" />
+
+        <RelativeLayout style="@style/profileDetailsLayout">
+            <ImageView
+                android:id="@+id/address"
+                android:src="@drawable/menu_location"
+                style="@style/profileDetailsImage" />
+
+            <com.app.sb.sbservices.Utils.ClanProTextView
+                android:text="Address"
+                android:layout_toRightOf="@id/address"
+                style="@style/profileDetailsTextMain" />
+
+            <EditText
+                android:id="@+id/et_address"
+                android:background="@null"
+                android:hint="Edit your Adreess Here"
+                android:layout_toRightOf="@id/address"
+                style="@style/profileDetailsMiniText" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/updateProfile"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:textAllCaps="false"
+            android:text="Update"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="@drawable/another_button_background"
+            />
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
