@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
 
-
+            android:progressTint="#ffff8800"
            />
             <com.app.sb.sbservices.Utils.ClanProTextView
                 android:layout_width="match_parent"

@@ -484,8 +484,9 @@ public class GuestLoginActivity extends AppCompatActivity implements
                     }
                     else if(status.equalsIgnoreCase("0"))
                     {
-
-                        Toast.makeText(GuestLoginActivity.this, ""+jsonObject.getString("msg"), Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(GuestLoginActivity.this, BottomNavActivity.class);
+                        startActivity(intent);
+                        //Toast.makeText(GuestLoginActivity.this, ""+jsonObject.getString("msg"), Toast.LENGTH_SHORT).show();
                     }
 
                 } catch (JSONException e) {
@@ -563,6 +564,14 @@ public class GuestLoginActivity extends AppCompatActivity implements
             personName = acct.getDisplayName();
             //personPhotoUrl = acct.getPhotoUrl().toString();
             googleEmail = acct.getEmail();
+            prefManager.storeValue(AppConstants.APP_LOGIN_USER_NAME, personName);
+            prefManager.setUsername(personName);
+            Log.i("google name", "name" + personName);
+
+            prefManager.storeValue(AppConstants.APP_LOGIN_USER_EMAIL, googleEmail);
+            prefManager.setEmailId(googleEmail);
+            Log.i("google phone", "phone" + googleEmail);
+
             Log.d("email", "display email: " + acct.getEmail());
             Log.d("name", "display name: " + acct.getDisplayName());
             Log.d("name", "Name: " + personName + ", email: " + email

@@ -139,35 +139,19 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageAdapter.ViewHold
 
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, AppConstants.RATING_SERVICE_REVIEW,
                         new Response.Listener<String>() {
-
-                            //open this url in post man
-
                             @Override
                             public void onResponse(String s) {
-                                //Disimissing the progress dialog
-
                                 String status;
                                 JSONObject jsonMainObject;
-
-
                                 try {
-
                                     jsonMainObject = new JSONObject(s);
-
                                     status = jsonMainObject.getString("status");
-
                                     if (status.equalsIgnoreCase("1")) {
-
                                         JSONArray listArray = jsonMainObject.getJSONArray("reviews");
                                         JSONObject memberObject;
-
-
                                         for (int i = 0; i < listArray.length(); i++) {
-                                            Log.i("rtaing service response","reposne"+i);
+                                            Log.i("rtaing service response","reposne"+s);
                                             memberObject = listArray.getJSONObject(i);
-
-
-
                                         }
                                         avgRating.setText(jsonMainObject.getString("total_rating")+"\u2605");
                                         avgRating.setOnClickListener(new View.OnClickListener() {
@@ -180,7 +164,6 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageAdapter.ViewHold
 
 
                                     }
-
 
                                 } catch (Exception e) {
                                     e.printStackTrace();

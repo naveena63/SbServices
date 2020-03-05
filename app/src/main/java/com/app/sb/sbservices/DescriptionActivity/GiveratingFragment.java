@@ -78,7 +78,7 @@ PrefManager prefManager;
     }
     public  void  ratingreview(){
         String commentEt = etComment.getText().toString();
-        String rate=String.valueOf(ratingBar);
+       int rate= (int) ratingBar.getRating();
 
 
 
@@ -118,7 +118,7 @@ PrefManager prefManager;
                 map.put("token", "c0304a62dd289bdc7364fb974c2091f6");
                 map.put("service_id", prefManager.getServiceId());
                 map.put("user_id", prefManager.getUserId());
-                map.put("rating",rate );
+                map.put("rating", String.valueOf(rate));
                 map.put("rating_message", commentEt);
                 return map;
             }
