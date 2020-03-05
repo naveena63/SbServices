@@ -40,14 +40,15 @@ public class FqsActivity extends AppCompatActivity {
     RequestQueue requestQueue;
     FaqsAdapter faqsAdapter;
     QuesAnsAdapter quesAnsAdapter;
-TextView noFaqs;
+    TextView noFaqs;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fqs);
         requestQueue = Volley.newRequestQueue(this);
         my_recycler_view = findViewById(R.id.recycelrview);
-        noFaqs=findViewById(R.id.no_packages_available);
+        noFaqs = findViewById(R.id.no_packages_available);
         servicesListModels = new ArrayList<>();
         faqsModelArrayList = new ArrayList<>();
         my_recycler_view.setLayoutManager(new LinearLayoutManager(FqsActivity.this));
@@ -77,21 +78,21 @@ TextView noFaqs;
                             String namecatrgry = json.getString("category_name");
                             servicesListModel.setServiceName(namecatrgry);
                             JSONArray jsonArray1 = json.getJSONArray("faq");
-                                faqsModelArrayList = new ArrayList<>();
-                                    for (int j = 0; j < jsonArray1.length(); j++) {
-                                        JSONObject jsonObject2 = jsonArray1.getJSONObject(j);
-                                        String question = jsonObject2.getString("question");
-                                        String answer = jsonObject2.getString("answer");
-                                        faqsModelArrayList.add(new FaqsModel(question, answer));
-                                    servicesListModel.setAllItemsInSection(faqsModelArrayList);
-                                    servicesListModels.add(servicesListModel);
-                                }
+                            faqsModelArrayList = new ArrayList<>();
+                            for (int j = 0; j < jsonArray1.length(); j++) {
+                                JSONObject jsonObject2 = jsonArray1.getJSONObject(j);
+                                String question = jsonObject2.getString("question");
+                                String answer = jsonObject2.getString("answer");
+                                faqsModelArrayList.add(new FaqsModel(question, answer));
+                                servicesListModel.setAllItemsInSection(faqsModelArrayList);
+                                servicesListModels.add(servicesListModel);
+                            }
 
                             faqsAdapter = new FaqsAdapter(servicesListModels);
                             quesAnsAdapter = new QuesAnsAdapter(FqsActivity.this, faqsModelArrayList);
-                                    my_recycler_view.setAdapter(faqsAdapter);
-                            }
+                            my_recycler_view.setAdapter(faqsAdapter);
                         }
+                    }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
