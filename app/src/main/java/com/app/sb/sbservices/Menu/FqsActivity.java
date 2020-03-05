@@ -52,8 +52,7 @@ TextView noFaqs;
         faqsModelArrayList = new ArrayList<>();
         my_recycler_view.setLayoutManager(new LinearLayoutManager(FqsActivity.this));
         my_recycler_view.setHasFixedSize(true);
-        faqsAdapter = new FaqsAdapter(servicesListModels);
-        quesAnsAdapter = new QuesAnsAdapter(this, faqsModelArrayList);
+
         getFaqs();
     }
 
@@ -87,24 +86,12 @@ TextView noFaqs;
                                     servicesListModel.setAllItemsInSection(faqsModelArrayList);
                                     servicesListModels.add(servicesListModel);
                                 }
-                            if (servicesListModels.size() > 0)
-                            {
+
+                            faqsAdapter = new FaqsAdapter(servicesListModels);
+                            quesAnsAdapter = new QuesAnsAdapter(FqsActivity.this, faqsModelArrayList);
                                     my_recycler_view.setAdapter(faqsAdapter);
-                                noFaqs.setVisibility(View.GONE);
-
-                            }else
-                            {
-                                noFaqs.setText(("msg"));
-                                noFaqs.setVisibility(View.VISIBLE);
                             }
-
-
-
-
-
                         }
-                    }
-
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

@@ -21,9 +21,9 @@ public class QuesAnsAdapter extends RecyclerView.Adapter<QuesAnsAdapter.SingleIt
 
 
     public QuesAnsAdapter(Context context, ArrayList<FaqsModel> itemsList) {
-        this.itemsList = itemsList;
-        this.mContext = context;
 
+        this.mContext = context;
+        this.itemsList = itemsList;
     }
 
     @Override

@@ -66,6 +66,7 @@ public class HorizontalPickerAdapter extends RecyclerView.Adapter<HorizontalPick
     public void onBindViewHolder(ViewHolder holder, int position) {
         Day item = getItem(position);
         holder.tvDay.setText(item.getDay());
+        holder.tvDay.setText(item.getBlockedDates());
         holder.tvWeekDay.setText(item.getWeekDay());
         holder.tvWeekDay.setTextColor(mDayOfWeekTextColor);
         if (item.isSelected()) {
@@ -78,6 +79,11 @@ public class HorizontalPickerAdapter extends RecyclerView.Adapter<HorizontalPick
             holder.tvDay.setBackgroundColor(mBackgroundColor);
             holder.tvDay.setTextColor(mUnselectedDayTextColor);
         }
+
+
+
+
+
     }
 
     private Drawable getDaySelectedBackground(View view) {
@@ -112,7 +118,6 @@ public class HorizontalPickerAdapter extends RecyclerView.Adapter<HorizontalPick
             tvWeekDay = (TextView) itemView.findViewById(R.id.tvWeekDay);
             itemView.setOnClickListener(this);
         }
-
         @Override
         public void onClick(View v) {
             listener.onClickView(v, getAdapterPosition());

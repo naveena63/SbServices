@@ -457,13 +457,13 @@ public class GuestLoginActivity extends AppCompatActivity implements
                     progressBar.dismiss();
                     JSONObject jsonObject = new JSONObject(response);
                     String status = jsonObject.getString("status");
-                    String msg = jsonObject.getString("msg");
+                //    String msg = jsonObject.getString("msg");
 
                     if (status.equalsIgnoreCase("1")) {
                         JSONObject jsonObject1 = jsonObject.getJSONObject("user");
                         String userId = jsonObject1.getString("user_id");
                         String email = jsonObject1.getString("email");
-                        String name = jsonObject1.getString("name");
+                     //   String name = jsonObject1.getString("name");
 
                         prefManager.storeValue(AppConstants.APP_USER_LOGIN, true);
                         prefManager.storeValue(AppConstants.APP_LOGIN_USER_ID, userId);
@@ -474,17 +474,18 @@ public class GuestLoginActivity extends AppCompatActivity implements
                         prefManager.setEmailId(email);
                         Log.i("google phone", "phone" + email);
 
-                        prefManager.storeValue(AppConstants.APP_LOGIN_USER_NAME, name);
+                      /*  prefManager.storeValue(AppConstants.APP_LOGIN_USER_NAME, name);
                         prefManager.setUsername(name);
-                        Log.i("google name", "name" + name);
+                        Log.i("google name", "name" + name);*/
 
                         Intent intent = new Intent(GuestLoginActivity.this, BottomNavActivity.class);
                         startActivity(intent);
-                        finish();
+
                     }
                     else if(status.equalsIgnoreCase("0"))
                     {
-                        Toast.makeText(context, ""+msg, Toast.LENGTH_SHORT).show();
+
+                        Toast.makeText(GuestLoginActivity.this, ""+jsonObject.getString("msg"), Toast.LENGTH_SHORT).show();
                     }
 
                 } catch (JSONException e) {
@@ -507,10 +508,10 @@ public class GuestLoginActivity extends AppCompatActivity implements
                 map.put("email", googleEmail);
                 Log.i("googleplusemail", "email" + googleEmail);
 
-                map.put("name",personName );
+                map.put("name",personName);
                 Log.i("googleplususername", "username" + personName);
                 map.put("token", "c0304a62dd289bdc7364fb974c2091f6");
-                map.put("id", "123");
+               // map.put("id", "123");
                 return map;
             }
 
@@ -519,17 +520,12 @@ public class GuestLoginActivity extends AppCompatActivity implements
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
         callbackManager.onActivityResult(requestCode, resultCode, data);
-      /*  if (requestCode == RC_SIGN_IN) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == RC_SIGN_IN) {
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
             handleSignInResult(result);
             Log.d("response",""+result);
-        }*/
-        if (requestCode == RC_SIGN_IN) {
-            GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
-            int statusCode = result.getStatus().getStatusCode();
-            Log.i("statuscode","statuscode"+result);
         }
     }
 

@@ -70,7 +70,7 @@ public class SplashActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         String msg = "Success";
-                        Toast.makeText(SplashActivity.this, msg, Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(SplashActivity.this, msg, Toast.LENGTH_SHORT).show();
                     }
                 });
         //this code will be written in splash screen
@@ -129,7 +129,7 @@ public class SplashActivity extends AppCompatActivity {
                             msg = getString(R.string.msg_subscribe_failed);
                         }
                         Log.d("sb", msg);
-                        Toast.makeText(SplashActivity.this, msg, Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(SplashActivity.this, msg, Toast.LENGTH_SHORT).show();
                     }
                 });
 

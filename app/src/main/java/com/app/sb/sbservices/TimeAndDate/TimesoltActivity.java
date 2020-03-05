@@ -209,7 +209,9 @@ Day day;
                 JSONObject jsonObject = new JSONObject(response);
                 String date = jsonObject.getString("date");
                 String message = jsonObject.getString("message");
-                        day.setDate(DateTime.parse(date));
+
+
+
 
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -227,8 +229,6 @@ Day day;
         };
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
-
-
     }
 
     private void getAvailableSlot() {

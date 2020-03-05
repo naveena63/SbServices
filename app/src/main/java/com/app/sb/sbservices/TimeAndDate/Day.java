@@ -8,6 +8,15 @@ public class Day {
     private DateTime date;
     private boolean selected;
     private String monthPattern = "MMMM YYYY";
+    String blockedDates;
+
+    public String getBlockedDates() {
+        return blockedDates;
+    }
+
+    public void setBlockedDates(String blockedDates) {
+        this.blockedDates = blockedDates;
+    }
 
     public Day(DateTime date) {
         this.date = date;
