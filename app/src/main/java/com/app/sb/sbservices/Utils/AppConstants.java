@@ -51,7 +51,7 @@ public class AppConstants {
     public static final String RATING_SERVICE ="https://www.sbservices.in/api/add-review";
     public static final String GUEST_BANNERS ="https://www.sbservices.in/api/getSliders";
     public static final String RATING_SERVICE_REVIEW ="https://www.sbservices.in/api/get-service-review";
-    public static final String FESTIVAL_TIMEBLOCKED ="http://sbservices.in/api/get-blocked-booking-dates";
+    public static final String FESTIVAL_TIMEBLOCKED ="https://sbservices.in/api/get-blocked-booking-dates";
 
     public static String APP_LOGIN_USER_ID = "user_id";
     public static String APP_LOGIN_USER_NAME = "user_name";

@@ -486,7 +486,7 @@ public class GuestLoginActivity extends AppCompatActivity implements
                     {
                         Intent intent = new Intent(GuestLoginActivity.this, BottomNavActivity.class);
                         startActivity(intent);
-                        //Toast.makeText(GuestLoginActivity.this, ""+jsonObject.getString("msg"), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(GuestLoginActivity.this, ""+jsonObject.getString("msg"), Toast.LENGTH_SHORT).show();
                     }
 
                 } catch (JSONException e) {

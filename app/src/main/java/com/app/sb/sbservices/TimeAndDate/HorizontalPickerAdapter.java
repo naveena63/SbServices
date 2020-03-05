@@ -2,19 +2,35 @@ package com.app.sb.sbservices.TimeAndDate;
 
 import android.app.AlarmManager;
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.app.sb.sbservices.R;
+import com.app.sb.sbservices.Utils.AppConstants;
 
 import org.joda.time.DateTime;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class HorizontalPickerAdapter extends RecyclerView.Adapter<HorizontalPickerAdapter.ViewHolder> {
 
@@ -29,6 +45,8 @@ public class HorizontalPickerAdapter extends RecyclerView.Adapter<HorizontalPick
     private int itemWidth;
     private final OnItemClickedListener listener;
     private ArrayList<Day> items;
+    Context context;
+    String presentdate=null;
 
     public HorizontalPickerAdapter(int itemWidth, OnItemClickedListener listener, Context context, int daysToCreate, int offset, int mBackgroundColor, int mDateSelectedColor, int mDateSelectedTextColor, int mTodayDateTextColor, int mTodayDateBackgroundColor, int mDayOfWeekTextColor, int mUnselectedDayTextColor) {
         items = new ArrayList<>();
@@ -57,6 +75,7 @@ public class HorizontalPickerAdapter extends RecyclerView.Adapter<HorizontalPick
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        context = parent.getContext();
         return new ViewHolder(
                 LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.item_day, parent, false));
@@ -64,11 +83,17 @@ public class HorizontalPickerAdapter extends RecyclerView.Adapter<HorizontalPick
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+        getData();
+
         Day item = getItem(position);
+
         holder.tvDay.setText(item.getDay());
         holder.tvDay.setText(item.getBlockedDates());
         holder.tvWeekDay.setText(item.getWeekDay());
         holder.tvWeekDay.setTextColor(mDayOfWeekTextColor);
+
+        presentdate=item.getDay();
+
         if (item.isSelected()) {
             holder.tvDay.setBackgroundDrawable(getDaySelectedBackground(holder.itemView));
             holder.tvDay.setTextColor(mDateSelectedTextColor);
@@ -80,9 +105,60 @@ public class HorizontalPickerAdapter extends RecyclerView.Adapter<HorizontalPick
             holder.tvDay.setTextColor(mUnselectedDayTextColor);
         }
 
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, AppConstants.FESTIVAL_TIMEBLOCKED, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    Log.i("blockedtime","blockredtime"+response);
+                    JSONArray jsonArray=new JSONArray(response);
+                    for (int i=0;i<jsonArray.length();i++)
+                    {
+                        JSONObject jsonObject=jsonArray.getJSONObject(i);
+                        String blockeddate =jsonObject.getString("blockeddate");
+                        String status=jsonObject.getString("status");
+                       // String message=jsonObject.getString("message");
+
+                        Log.i("blocarray","block"+presentdate);
+                        if(presentdate.equals(blockeddate))
+                        {
+                            holder.tvDay.setTextColor(Color.BLACK);
+                            Toast.makeText(context, ""+jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+
+                        }
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
 
 
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
 
+            }
+        }) {
+
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+
+                Map<String, String> map = new HashMap<>();
+                map.put("token", "c0304a62dd289bdc7364fb974c2091f6");
+
+                return map;
+            }
+
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(context);
+        requestQueue.add(stringRequest);
+
+
+    }
+
+    private void getData() {
 
     }
 
@@ -117,7 +193,9 @@ public class HorizontalPickerAdapter extends RecyclerView.Adapter<HorizontalPick
             tvDay.setWidth(itemWidth);
             tvWeekDay = (TextView) itemView.findViewById(R.id.tvWeekDay);
             itemView.setOnClickListener(this);
+
         }
+
         @Override
         public void onClick(View v) {
             listener.onClickView(v, getAdapterPosition());

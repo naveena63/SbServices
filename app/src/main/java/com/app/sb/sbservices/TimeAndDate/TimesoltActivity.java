@@ -203,32 +203,7 @@ Day day;
         //   selectedDate = dateSelected.toString();
 
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, AppConstants.FESTIVAL_TIMEBLOCKED, response -> {
-            apiCallingFlow.onSuccessResponse();
-            try {
-                JSONObject jsonObject = new JSONObject(response);
-                String date = jsonObject.getString("date");
-                String message = jsonObject.getString("message");
 
-
-
-
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        },
-                error -> apiCallingFlow.onErrorResponse()) {
-            @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> map = new HashMap<>();
-                map.put("token", "c0304a62dd289bdc7364fb974c2091f6");
-
-                Log.e("dgdgd", "shshhs" + selectedDate);
-                return map;
-            }
-        };
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
     }
 
     private void getAvailableSlot() {
