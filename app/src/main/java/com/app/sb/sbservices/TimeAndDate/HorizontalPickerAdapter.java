@@ -47,6 +47,7 @@ public class HorizontalPickerAdapter extends RecyclerView.Adapter<HorizontalPick
     private ArrayList<Day> items;
     Context context;
     String presentdate=null;
+    String blockedDate;
 
     public HorizontalPickerAdapter(int itemWidth, OnItemClickedListener listener, Context context, int daysToCreate, int offset, int mBackgroundColor, int mDateSelectedColor, int mDateSelectedTextColor, int mTodayDateTextColor, int mTodayDateBackgroundColor, int mDayOfWeekTextColor, int mUnselectedDayTextColor) {
         items = new ArrayList<>();
@@ -83,10 +84,8 @@ public class HorizontalPickerAdapter extends RecyclerView.Adapter<HorizontalPick
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        getData();
-
+       holder.getData();
         Day item = getItem(position);
-
         holder.tvDay.setText(item.getDay());
         holder.tvDay.setText(item.getBlockedDates());
         holder.tvWeekDay.setText(item.getWeekDay());
@@ -105,63 +104,7 @@ public class HorizontalPickerAdapter extends RecyclerView.Adapter<HorizontalPick
             holder.tvDay.setTextColor(mUnselectedDayTextColor);
         }
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, AppConstants.FESTIVAL_TIMEBLOCKED, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                try {
-                    Log.i("blockedtime","blockredtime"+response);
-                    JSONArray jsonArray=new JSONArray(response);
-                    for (int i=0;i<jsonArray.length();i++)
-                    {
-                        JSONObject jsonObject=jsonArray.getJSONObject(i);
-                        String blockeddate =jsonObject.getString("blockeddate");
-                        String status=jsonObject.getString("status");
-                       // String message=jsonObject.getString("message");
-
-                        Log.i("blocarray","block"+presentdate);
-                        if(presentdate.equals(blockeddate))
-                        {
-                            holder.tvDay.setTextColor(Color.BLACK);
-                            Toast.makeText(context, ""+jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
-                        }
-                        else {
-
-                        }
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-
-
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-
-            }
-        }) {
-
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-
-                Map<String, String> map = new HashMap<>();
-                map.put("token", "c0304a62dd289bdc7364fb974c2091f6");
-
-                return map;
-            }
-
-        };
-
-        RequestQueue requestQueue = Volley.newRequestQueue(context);
-        requestQueue.add(stringRequest);
-
-
     }
-
-    private void getData() {
-
-    }
-
     private Drawable getDaySelectedBackground(View view) {
         Drawable drawable = view.getResources().getDrawable(R.drawable.background_day_selected);
         DrawableCompat.setTint(drawable, mDateSelectedColor);
@@ -187,15 +130,71 @@ public class HorizontalPickerAdapter extends RecyclerView.Adapter<HorizontalPick
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView tvDay, tvWeekDay;
 
-        public ViewHolder(View itemView) {
+        public ViewHolder(View itemView)
+        {
             super(itemView);
             tvDay = (TextView) itemView.findViewById(R.id.tvDay);
             tvDay.setWidth(itemWidth);
             tvWeekDay = (TextView) itemView.findViewById(R.id.tvWeekDay);
             itemView.setOnClickListener(this);
-
         }
 
+        public void getData()
+        {
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, AppConstants.FESTIVAL_TIMEBLOCKED, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    try {
+                        Log.i("blockedtime","blockredtime"+response);
+                        JSONArray jsonArray=new JSONArray(response);
+                        for (int i=0;i<jsonArray.length();i++)
+                        {
+                            JSONObject jsonObject=jsonArray.getJSONObject(i);
+                            blockedDate =jsonObject.getString("blockeddate");
+                            String status=jsonObject.getString("status");
+                            // String message=jsonObject.getString("message");
+
+                            Log.i("blocarray","block"+presentdate);
+                            if (status.equals("blocked"))
+                            {
+                                if(presentdate.equals(blockedDate))
+                                {
+                                    tvDay.setTextColor(Color.BLACK);
+                                    Toast.makeText(context, "msg", Toast.LENGTH_SHORT).show();
+                                }
+                                else {
+
+                                }
+                            }
+
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+
+                }
+            }) {
+
+                @Override
+                protected Map<String, String> getParams() throws AuthFailureError {
+
+                    Map<String, String> map = new HashMap<>();
+                    map.put("token", "c0304a62dd289bdc7364fb974c2091f6");
+
+                    return map;
+                }
+
+            };
+
+            RequestQueue requestQueue = Volley.newRequestQueue(context);
+            requestQueue.add(stringRequest);
+        }
         @Override
         public void onClick(View v) {
             listener.onClickView(v, getAdapterPosition());
