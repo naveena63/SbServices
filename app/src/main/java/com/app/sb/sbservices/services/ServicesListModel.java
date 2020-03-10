@@ -1,6 +1,6 @@
 package com.app.sb.sbservices.services;
 
-import com.app.sb.sbservices.Menu.FaqsModel;
+import com.app.sb.sbservices.Menu.QuestionAndAnswerModel;
 
 import java.util.ArrayList;
 
@@ -10,13 +10,13 @@ public class ServicesListModel {
     String serviceImage;
     String inclusion;
     String exclusion;
-    private ArrayList<FaqsModel> allItemsInSection;
+    private ArrayList<QuestionAndAnswerModel> allItemsInSection;
 
-    public ArrayList<FaqsModel> getAllItemsInSection() {
+    public ArrayList<QuestionAndAnswerModel> getAllItemsInSection() {
         return allItemsInSection;
     }
 
-    public void setAllItemsInSection(ArrayList<FaqsModel> allItemsInSection) {
+    public void setAllItemsInSection(ArrayList<QuestionAndAnswerModel> allItemsInSection) {
         this.allItemsInSection = allItemsInSection;
     }
 

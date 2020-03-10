@@ -1,10 +1,10 @@
 package com.app.sb.sbservices.Menu;
 
-public class FaqsModel {
+public class QuestionAndAnswerModel {
     String question;
     String answer;
 
-    public FaqsModel(String question, String answer) {
+    public QuestionAndAnswerModel(String question, String answer) {
         this.question=question;
         this.answer=answer;
     }

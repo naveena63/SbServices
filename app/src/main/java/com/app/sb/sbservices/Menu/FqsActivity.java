@@ -16,11 +16,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.app.sb.sbservices.Packages.PackageAdapter;
-import com.app.sb.sbservices.Packages.PackagesActivity;
 import com.app.sb.sbservices.R;
-import com.app.sb.sbservices.Utils.AppConstants;
-import com.app.sb.sbservices.services.HomeScreenListener;
 import com.app.sb.sbservices.services.ServicesListModel;
 
 import org.json.JSONArray;
@@ -29,13 +25,12 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class FqsActivity extends AppCompatActivity {
 
     ArrayList<ServicesListModel> servicesListModels;
-    ArrayList<FaqsModel> faqsModelArrayList;
+    ArrayList<QuestionAndAnswerModel> questionAndAnswerModelArrayList;
     RecyclerView my_recycler_view;
     RequestQueue requestQueue;
     FaqsAdapter faqsAdapter;
@@ -50,7 +45,7 @@ public class FqsActivity extends AppCompatActivity {
         my_recycler_view = findViewById(R.id.recycelrview);
         noFaqs = findViewById(R.id.no_packages_available);
         servicesListModels = new ArrayList<>();
-        faqsModelArrayList = new ArrayList<>();
+        questionAndAnswerModelArrayList = new ArrayList<>();
         my_recycler_view.setLayoutManager(new LinearLayoutManager(FqsActivity.this));
         my_recycler_view.setHasFixedSize(true);
 
@@ -64,7 +59,7 @@ public class FqsActivity extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 Log.i("response", "response" + response);
-
+                questionAndAnswerModelArrayList = new ArrayList<>();
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     String status = jsonObject.getString("status");
@@ -76,22 +71,37 @@ public class FqsActivity extends AppCompatActivity {
                             JSONObject json = jsonArray.getJSONObject(i);
                             ServicesListModel servicesListModel = new ServicesListModel();
                             String namecatrgry = json.getString("category_name");
+                            String faq = json.getString("faq");
                             servicesListModel.setServiceName(namecatrgry);
-                            JSONArray jsonArray1 = json.getJSONArray("faq");
-                            faqsModelArrayList = new ArrayList<>();
-                            for (int j = 0; j < jsonArray1.length(); j++) {
-                                JSONObject jsonObject2 = jsonArray1.getJSONObject(j);
-                                String question = jsonObject2.getString("question");
-                                String answer = jsonObject2.getString("answer");
-                                faqsModelArrayList.add(new FaqsModel(question, answer));
-                                servicesListModel.setAllItemsInSection(faqsModelArrayList);
-                                servicesListModels.add(servicesListModel);
+
+
+                            if (faq.equalsIgnoreCase("No Faq")) {
+                                //  Toast.makeText(FqsActivity.this, "", Toast.LENGTH_SHORT).show();
+                                noFaqs.setText("no faqs");
+                                noFaqs.setVisibility(View.VISIBLE);
+
+                            }else
+                            {
+                                JSONArray jsonArray1 = json.getJSONArray(faq);
+
+
+
+                                for (int j = 0; j < jsonArray1.length(); j++) {
+                                    JSONObject jsonObject2 = jsonArray1.getJSONObject(j);
+                                    String question = jsonObject2.getString("question");
+                                    String answer = jsonObject2.getString("answer");
+                                    questionAndAnswerModelArrayList.add(new QuestionAndAnswerModel(question, answer));
+                                    servicesListModel.setAllItemsInSection(questionAndAnswerModelArrayList);
+                                    servicesListModels.add(servicesListModel);
+                                }
+
+                                faqsAdapter = new FaqsAdapter(servicesListModels);
+                                quesAnsAdapter = new QuesAnsAdapter(FqsActivity.this, questionAndAnswerModelArrayList);
+                                my_recycler_view.setAdapter(faqsAdapter);
                             }
 
-                            faqsAdapter = new FaqsAdapter(servicesListModels);
-                            quesAnsAdapter = new QuesAnsAdapter(FqsActivity.this, faqsModelArrayList);
-                            my_recycler_view.setAdapter(faqsAdapter);
                         }
+
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

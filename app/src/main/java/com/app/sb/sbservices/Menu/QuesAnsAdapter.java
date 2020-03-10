@@ -2,7 +2,6 @@ package com.app.sb.sbservices.Menu;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,13 +13,13 @@ import java.util.ArrayList;
 
 public class QuesAnsAdapter extends RecyclerView.Adapter<QuesAnsAdapter.SingleItemRowHolder> {
 
-    private ArrayList<FaqsModel> itemsList;
+    private ArrayList<QuestionAndAnswerModel> itemsList;
     private Context mContext;
 
 
 
 
-    public QuesAnsAdapter(Context context, ArrayList<FaqsModel> itemsList) {
+    public QuesAnsAdapter(Context context, ArrayList<QuestionAndAnswerModel> itemsList) {
 
         this.mContext = context;
         this.itemsList = itemsList;
@@ -37,7 +36,7 @@ public class QuesAnsAdapter extends RecyclerView.Adapter<QuesAnsAdapter.SingleIt
     @Override
     public void onBindViewHolder(SingleItemRowHolder holder, int i) {
 
-        FaqsModel singleItem = itemsList.get(i);
+        QuestionAndAnswerModel singleItem = itemsList.get(i);
         String question = (itemsList.get(i).getQuestion());
         String answer = (itemsList.get(i).getAnswer());
 
