@@ -1,6 +1,9 @@
 package com.app.sb.sbservices.TimeAndDate;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -48,6 +51,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
+import static com.facebook.FacebookSdk.getApplicationContext;
+
 public class TimesoltActivity extends AppCompatActivity implements DatePickerListener, TImeSlotClickListener, Increment_Listener {
     public static String TAG = "TimeSlotActivity";
     RecyclerView recyclerView;
@@ -64,8 +69,15 @@ public class TimesoltActivity extends AppCompatActivity implements DatePickerLis
     private List<TimeSlotModel> timeModels = new ArrayList<>();
     private TimeSlotAdapter adapter;
     Toolbar toolbar;
-Day day;
+    Day day;
     String slotStatus;
+    String blockStatus;
+    String date1="0";
+    String date3="0";
+    String date4="0";
+    String date;
+    String month;
+    String year;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +87,7 @@ Day day;
         picker = findViewById(R.id.datePicker);
         parentLayout = findViewById(R.id.relative_layout);
         addtocart = findViewById(R.id.add_cart_btn);
-
+        seletapi();
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle(getResources().getString(R.string.time_date));
@@ -84,13 +96,6 @@ Day day;
         }
 
 
-        addtocart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onClickADDCart();
-
-            }
-        });
 
         prefManager = new PrefManager(this);
         Bundle intent = getIntent().getExtras();
@@ -114,35 +119,80 @@ Day day;
         picker.setDate(new DateTime());
         GridLayoutManager layoutManager = new GridLayoutManager(TimesoltActivity.this, 2);
         recyclerView.setLayoutManager(layoutManager);
+
         requestTimeSlotServiceApi();
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://sbservices.in/api/get-blocked-booking-dates", new Response.Listener<String>() {
+//        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://sbservices.in/api/get-blocked-booking-dates", new Response.Listener<String>() {
+//            @Override
+//            public void onResponse(String response) {
+//                Log.e("tmlt",response);
+//
+//                try {
+//                    JSONObject jsonObject=new JSONObject(response);
+//                    String date2=jsonObject.getString("blockeddate");
+//                    blockStatus=jsonObject.getString("status");
+//                    String date=date2;
+//                    String[] items1 = date.split("-");
+//                    date3=items1[2];
+//                    month=items1[1];
+//                    year=items1[0];
+//                    Log.e("tbk",date2);
+//                } catch (JSONException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }, new Response.ErrorListener() {
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//
+//            }
+//        }) {
+//            @Override
+//            protected Map<String, String> getParams() throws AuthFailureError {
+//                Map<String, String> map = new HashMap<>();
+//                map.put("token", "c0304a62dd289bdc7364fb974c2091f6");
+//                return map;
+//            }
+//        };
+//        RequestQueue requestQueue = Volley.newRequestQueue(this);
+//        requestQueue.add(stringRequest);
+
+        addtocart.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onResponse(String response) {
+            public void onClick(View v) {
+                SharedPreferences selecteddate = getApplicationContext().getSharedPreferences("selecteddate", 0); // 0 - for private mode
+                SharedPreferences.Editor editor = selecteddate.edit();
 
-                try {
-                    JSONObject jsonObject=new JSONObject(response);
-                 String date=jsonObject.getString("date");
+                String selday=selecteddate.getString("selectedday", "0");
 
+                Log.e("tmsel",date1+date4);
+                if (date1.equals(date4)){
+                    AlertDialog.Builder builder1 = new AlertDialog.Builder(TimesoltActivity.this);
+                    builder1.setMessage("Today is holiday");
+                    builder1.setCancelable(true);
 
-                } catch (JSONException e) {
-                    e.printStackTrace();
+                    builder1.setPositiveButton(
+                            "Yes",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.cancel();
+                                    editor.clear();
+                                    editor.commit();
+                                }
+                            });
+
+                    AlertDialog alert11 = builder1.create();
+                    alert11.show();
                 }
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
+                else {
+                    onClickADDCart();
+                    editor.clear();
+                    editor.commit();
+                }
 
             }
-        }) {
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> map = new HashMap<>();
-                map.put("token", "c0304a62dd289bdc7364fb974c2091f6");
-                return map;
-            }
-        };
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+        });
+
+
 
     }
 
@@ -222,7 +272,13 @@ Day day;
                     model.setTimeSlotName(time_slot_name);
                     model.setStatus(status);
                     model.setSelected(false);
-                    Log.v("DATE", "" + selectedDate);
+                    String date=selectedDate;
+                    String[] items1 = date.split("-");
+                    date4=items1[0];
+                    month=items1[1];
+                    year=items1[2];
+                    Log.v("DATE", "" + selectedDate+date4);
+
 
                     if (status.equalsIgnoreCase("active")) {
 //                                Toast.makeText(TimeSlotActivity.this, "DATE "+selectedDate, Toast.LENGTH_SHORT).show();
@@ -239,6 +295,7 @@ Day day;
                     if (timeModels.size() > 0) {
                         adapter = new TimeSlotAdapter(timeModels,
                                 TimesoltActivity.this);
+                        adapter.notifyDataSetChanged();
                         recyclerView.setAdapter(adapter);
                     }
 
@@ -263,6 +320,8 @@ Day day;
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
 
+
+
     }
 
     @Override
@@ -284,6 +343,9 @@ Day day;
     }
 
     void onClickADDCart() {
+
+
+        // Log.e("slot",slotStatus);
 
         if (slotTime != null) {
 
@@ -403,5 +465,67 @@ Day day;
                 }
             }
         }
+    }
+    public void seletapi(){
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, AppConstants.FESTIVAL_TIMEBLOCKED, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    Log.i("blockedtime","blockredtime"+response);
+                    JSONArray jsonArray=new JSONArray(response);
+                    for (int i=0;i<jsonArray.length();i++)
+                    {
+                        JSONObject jsonObject=jsonArray.getJSONObject(i);
+                        date =jsonObject.getString("blockeddate");
+                        blockStatus=jsonObject.getString("status");
+
+                        String date6=date;
+                        String[] items1 = date6.split("-");
+                        date1=items1[2];
+                        month=items1[1];
+                        year=items1[0];
+
+
+                        Log.e("date6",date6+date1);
+                        // String message=jsonObject.getString("message");
+
+//                        Log.i("blocarray","block"+presentdate);
+//                        if(presentdate.equals(blockeddate))
+//                        {
+//                            holder.tvDay.setTextColor(Color.BLACK);
+//                            Toast.makeText(context, ""+jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
+//                        }
+//                        else {
+//
+//                        }
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        }) {
+
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+
+                Map<String, String> map = new HashMap<>();
+                map.put("token", "c0304a62dd289bdc7364fb974c2091f6");
+
+                return map;
+            }
+
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+
     }
 }

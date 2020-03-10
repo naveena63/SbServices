@@ -83,7 +83,9 @@ public class HorizontalPickerRecyclerView extends RecyclerView implements OnItem
 
     private void selectItem(boolean isSelected,int position) {
         adapter.getItem(position).setSelected(isSelected);
+       // adapter.notifyDataSetChanged();
         adapter.notifyItemChanged(position);
+
         if(isSelected)
         {
             listener.onDateSelected(adapter.getItem(position));
