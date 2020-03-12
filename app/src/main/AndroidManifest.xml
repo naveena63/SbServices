@@ -16,7 +16,6 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <permission  android:name="android.permission.INTERNET"></permission>
 
-
     <uses-permission
         android:name="android.permission.CLEAR_APP_CACHE"
         tools:ignore="ProtectedPermissions" />
@@ -56,12 +55,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <service android:name=".MyFcmTextMessagingService">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
 
         <activity
             android:name=".User.LoginActivity"
@@ -147,6 +140,28 @@
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
+
+
+        <service android:name=".fcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/sb_services_logo" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/transparent" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+
+
     </application>
 
 </manifest>

@@ -42,6 +42,10 @@
     <string name="hello_world">Hello world!</string>
     <string name="imgdesc">imgdesc</string>
 
+
+    <string name="default_notification_channel_id">notification_default_value</string>
+    <string name="default_notification_channel_title">SB Group</string>
+
     <string name="time_slot_one">7Am-9Am</string>
     <string name="privacy">PERSONAL INFORMATION
 

@@ -23,6 +23,7 @@ import com.app.sb.sbservices.Utils.AppConstants;
 import com.app.sb.sbservices.Utils.PrefManager;
 import com.app.sb.sbservices.BottomNavActivity;
 import com.app.sb.sbservices.R;
+import com.app.sb.sbservices.Utils.SharedPreference;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -168,6 +169,8 @@ Button buttonLogin;
                 Map<String,String> map = new HashMap<String,String>();
                 map.put(KEY_MOBILE, phone);
                 map.put(KEY_PASSWORD, password);
+              //  map.put("fcm_token", SharedPreference.getStringPreference(LoginActivity.this,"TOKEN"));
+                Log.e("dchvbdgvcgdvc","cdh vb "+SharedPreference.getStringPreference(LoginActivity.this,"TOKEN"));
 
                 return map;
             }

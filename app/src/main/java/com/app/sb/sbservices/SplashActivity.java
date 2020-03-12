@@ -13,8 +13,10 @@ import android.os.Bundle;
 import android.support.v7.widget.AppCompatImageView;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.app.sb.sbservices.DescriptionActivity.MainActivity;
 import com.app.sb.sbservices.Utils.AppConstants;
 import com.app.sb.sbservices.Utils.GlobalVariable;
 import com.app.sb.sbservices.Utils.PrefManager;
@@ -31,67 +33,17 @@ import java.util.List;
 
 public class SplashActivity extends AppCompatActivity {
 
-    Handler handler;
-    private static final String CHANNEL_ID = "4565";
-    String unique_id;
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    AppCompatImageView ivImage;
+  ImageView ivImage;
     PrefManager prefManager;
-
+Handler handler;
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_activity);
-        prefManager=new PrefManager(this);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            CharSequence name = getString(R.string.channel_name);
-            String description = getString(R.string.channcel_desc);
-            int importance = NotificationManager.IMPORTANCE_DEFAULT;
-            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, name, importance);
-            channel.setDescription(description);
-            NotificationManager notificationManager = getSystemService(NotificationManager.class);
-            notificationManager.createNotificationChannel(channel);
-            FirebaseMessaging.getInstance().subscribeToTopic("weather")
-                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            String msg = getString(R.string.msg_subscribed);
-                            if (!task.isSuccessful()) {
-                                msg = getString(R.string.msg_subscribe_failed);
-                            }
-                            Log.d("app", msg);
-                            // Toast.makeText(SplashActivity.this, msg, Toast.LENGTH_SHORT).show();
-                        }
-                    });
-        }
-        FirebaseMessaging.getInstance().subscribeToTopic("websitetool")
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        String msg = "Success";
-                       // Toast.makeText(SplashActivity.this, msg, Toast.LENGTH_SHORT).show();
-                    }
-                });
-        //this code will be written in splash screen
-        unique_id = Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
-        Log.d("deviceId", "deviceid" + unique_id);
-        prefManager.storeValue(AppConstants.DEVICE_ID, unique_id);
-        prefManager.setDevceid(unique_id);
+        prefManager = new PrefManager(this);
 
 
-        //this  token will changes for Every Device this  token  will give to server
-        FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(new OnSuccessListener<InstanceIdResult>() {
-            @Override
-            public void onSuccess(InstanceIdResult instanceIdResult) {
-                String deviceToken = instanceIdResult.getToken();
-                Log.d("dsdtoken", "devicesToken" + deviceToken);
-                prefManager.storeValue(AppConstants.REFRESH_TOKEN, deviceToken);
-                prefManager.setRegistrationtoken(deviceToken);
-                Log.d("token", "token" + prefManager.getRegistrationtoken());
-            }
-            // or directly send it to server
-        });
         getSupportActionBar().hide();
         ivImage = findViewById(R.id.logo_one);
         prefManager = new PrefManager(this);
@@ -100,6 +52,10 @@ public class SplashActivity extends AppCompatActivity {
 
         GlobalVariable.deviceWidth = displayMetrics.widthPixels;
         GlobalVariable.deviceHeight = displayMetrics.heightPixels;
+
+
+        getNotifications();
+
 
         handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -120,29 +76,97 @@ public class SplashActivity extends AppCompatActivity {
             }
 
         }, 3000);
-        FirebaseMessaging.getInstance().subscribeToTopic("weather")
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        String msg = getString(R.string.msg_subscribed);
-                        if (!task.isSuccessful()) {
-                            msg = getString(R.string.msg_subscribe_failed);
-                        }
-                        Log.d("sb", msg);
-                       // Toast.makeText(SplashActivity.this, msg, Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-
-// These registration tokens come from the client FCM SDKs.
-        List<String> registrationTokens = Arrays.asList(
-                "YOUR_REGISTRATION_TOKEN_1",
-                // ...
-                "YOUR_REGISTRATION_TOKEN_n"
-        );
 
     }
 
+    private void getNotifications() {
+
+
+        Intent i = getIntent();
+        Bundle extras = i.getExtras();
+        if (extras != null) {
+            for (String key : extras.keySet()) {
+                Object value = extras.get(key);
+                //  Log.d(Application.APPTAG, "Extras received at onCreate:  Key: " + key + " Value: " + value);
+
+                Log.e("cbgdvcgdvcg","dcbdcvdgv "+"Extras received at onCreate:  Key: " + key + " Value: " + value);
+            }
+            String title = extras.getString("title");
+            String message = extras.getString("body");
+            String tag = extras.getString("tag");
+
+            String  image =  extras.getString("image");
+            String icon =  extras.getString("icon");
+
+            String video_id = extras.getString("video_id");
+
+            String cat_list_sub_id = extras.getString("cat_id");
+
+            String id = extras.getString("id");
+
+            //     String user_id = extras.getString("user_id");
+
+
+            Log.e("cbgdvcgdvcg","spalesh title "+title);
+            //    Log.e("cbgdvcgdvcg","spalesh title "+SharedPreference.getStringPreference(this,"NOTIFICATIONSTATUS"));
+            Log.e("cbgdvcgdvcg","messgae "+message);
+            Log.e("cbgdvcgdvcg","tag............. "+tag);
+
+            Log.e("cbgdvcgdvcg","catlist id............. "+cat_list_sub_id);
+
+            Log.e("cbgdvcgdvcg","image.......... "+image);
+            Log.e("cbgdvcgdvcg","icon............ "+icon);
+
+            //     Log.e("cbgdvcgdvcg","user id............. "+user_id);
+
+
+
+            if (message!=null && message.length()>0) {
+                getIntent().removeExtra("body");
+
+                if (tag.equalsIgnoreCase("manikratna"))
+                {
+                    Intent intent = new Intent(this, MainActivity.class);
+                    intent.putExtra("id",video_id);
+                    intent.putExtra("name",title);
+                    //    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                    finish();
+                    //    Toast.makeText(this, "Hello", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                else
+                {
+                    Intent intent = new Intent(this, MainActivity.class);
+                    // intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                    finish();
+                    return;
+                }
+
+                //  showNotificationInADialog(title, message);
+            }
+        }
+
+        // notifications channel creation
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+
+            // Create channel to show notifications.
+            String channelId = getResources().getString(R.string.default_notification_channel_id);
+            String channelName = getResources().getString(R.string.common_google_play_services_notification_channel_name);
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(new NotificationChannel(channelId,
+                    channelName, NotificationManager.IMPORTANCE_LOW));
+
+
+
+        }
+
+
+
+
+    }
 }
 
 
