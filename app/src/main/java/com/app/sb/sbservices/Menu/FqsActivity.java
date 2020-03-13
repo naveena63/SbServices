@@ -70,12 +70,7 @@ public class FqsActivity extends AppCompatActivity {
                             String namecatrgry = json.getString("category_name");
                             String faq = json.getString("faq");
                             servicesListModel.setServiceName(namecatrgry);
-                       /*     if (faq.equalsIgnoreCase("No Faq")) {
-                                //  Toast.makeText(FqsActivity.this, "", Toast.LENGTH_SHORT).show();
-                                noFaqs.setText("no faqs");
-                                noFaqs.setVisibility(View.VISIBLE);
-                            }
-                            else*/
+
 
                             if (faq.equalsIgnoreCase("No Faq")) {
                                 //  Toast.makeText(FqsActivity.this, "", Toast.LENGTH_SHORT).show();

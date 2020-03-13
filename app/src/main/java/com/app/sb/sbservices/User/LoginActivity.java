@@ -169,7 +169,7 @@ Button buttonLogin;
                 Map<String,String> map = new HashMap<String,String>();
                 map.put(KEY_MOBILE, phone);
                 map.put(KEY_PASSWORD, password);
-              //  map.put("fcm_token", SharedPreference.getStringPreference(LoginActivity.this,"TOKEN"));
+                map.put("fcm_token", SharedPreference.getStringPreference(LoginActivity.this,"TOKEN"));
                 Log.e("dchvbdgvcgdvc","cdh vb "+SharedPreference.getStringPreference(LoginActivity.this,"TOKEN"));
 
                 return map;

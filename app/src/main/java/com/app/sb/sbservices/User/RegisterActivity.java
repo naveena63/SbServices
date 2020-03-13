@@ -23,6 +23,7 @@ import com.app.sb.sbservices.Utils.ApiCallingFlow;
 import com.app.sb.sbservices.Utils.AppConstants;
 import com.app.sb.sbservices.Utils.PrefManager;
 import com.app.sb.sbservices.R;
+import com.app.sb.sbservices.Utils.SharedPreference;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -192,6 +193,7 @@ public class RegisterActivity extends AppCompatActivity {
                 map.put(KEY_PASSWORD, password);
                 map.put(KEY_PHONE, phone);
                 map.put(KEY_REFERAL, Referal);
+                map.put("fcm_token", SharedPreference.getStringPreference(RegisterActivity.this,"TOKEN"));
                 return map;
             }
         };

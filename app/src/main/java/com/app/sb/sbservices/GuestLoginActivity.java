@@ -42,6 +42,7 @@ import com.app.sb.sbservices.User.RegisterActivity;
 import com.app.sb.sbservices.Utils.AppConstants;
 import com.app.sb.sbservices.Utils.PrefManager;
 
+import com.app.sb.sbservices.Utils.SharedPreference;
 import com.facebook.AccessToken;
 import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
@@ -437,7 +438,7 @@ public class GuestLoginActivity extends AppCompatActivity implements
                 Log.i("username", "username" + first_name + last_name);
 
                 map.put("token", "c0304a62dd289bdc7364fb974c2091f6");
-                
+                map.put("fcm_token", SharedPreference.getStringPreference(GuestLoginActivity.this,"TOKEN"));
 
                 return map;
             }
@@ -512,6 +513,7 @@ public class GuestLoginActivity extends AppCompatActivity implements
                 map.put("name",personName);
                 Log.i("googleplususername", "username" + personName);
                 map.put("token", "c0304a62dd289bdc7364fb974c2091f6");
+                map.put("fcm_token", SharedPreference.getStringPreference(GuestLoginActivity.this,"TOKEN"));
                // map.put("id", "123");
                 return map;
             }

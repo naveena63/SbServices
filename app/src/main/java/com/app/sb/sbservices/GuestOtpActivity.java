@@ -22,6 +22,7 @@ import com.android.volley.toolbox.Volley;
 import com.app.sb.sbservices.Utils.ApiCallingFlow;
 import com.app.sb.sbservices.Utils.AppConstants;
 import com.app.sb.sbservices.Utils.PrefManager;
+import com.app.sb.sbservices.Utils.SharedPreference;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -134,6 +135,8 @@ final  String mobile=mobile_number.getText().toString();
                 Map<String,String> map= new HashMap<>();
                 map.put("token","c0304a62dd289bdc7364fb974c2091f6");
                 map.put("mobile",mobile);
+                map.put("fcm_token", SharedPreference.getStringPreference(GuestOtpActivity.this,"TOKEN"));
+
                 return map;
             }
         };
