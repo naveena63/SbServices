@@ -57,7 +57,7 @@ public class FqsActivity extends AppCompatActivity {
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url_formation, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Log.i("response", "response" + response);
+                Log.i("Faqresponse", "response" + response);
                 questionAndAnswerModelArrayList = new ArrayList<>();
                 try {
                     JSONObject jsonObject = new JSONObject(response);
