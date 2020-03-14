@@ -22,6 +22,7 @@ import com.android.volley.toolbox.Volley;
 import com.app.sb.sbservices.Utils.ApiCallingFlow;
 import com.app.sb.sbservices.Utils.AppConstants;
 import com.app.sb.sbservices.R;
+import com.app.sb.sbservices.Utils.PrefManager;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -37,12 +38,14 @@ public class OTPActivity extends AppCompatActivity {
     public static final String MyPREFERENCES = "MyPrefs";
     EditText enterOtp;
     Button login_button;
+    PrefManager prefManager;
     private ApiCallingFlow apiCallingFlow;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp);
         enterOtp = findViewById(R.id.etOtp);
+        prefManager=new PrefManager(this);
         login_button = findViewById(R.id.buttonSbmit);
         sharedpreferences = getSharedPreferences(MyPREFERENCES,
                 Context.MODE_PRIVATE);
@@ -76,6 +79,7 @@ getSupportActionBar().hide();
 
         final String otp = enterOtp.getText().toString();
         final String userid = sp.getString("userid", "defaultvalue");
+        Log.i("otpuSerid","userid"+userid);
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, AppConstants.OTP_URL,
                 new Response.Listener<String>() {
@@ -117,7 +121,8 @@ getSupportActionBar().hide();
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> map = new HashMap<String, String>();
                 map.put(KEY_OTP, otp);
-                map.put(KEY_USERID, userid);
+                map.put(KEY_USERID, prefManager.getUserId());
+                Log.i("KeyUserid","klahd");
                 return map;
             }
         };

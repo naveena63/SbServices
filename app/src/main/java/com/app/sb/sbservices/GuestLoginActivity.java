@@ -439,7 +439,7 @@ public class GuestLoginActivity extends AppCompatActivity implements
 
                 map.put("token", "c0304a62dd289bdc7364fb974c2091f6");
                 map.put("fcm_token", SharedPreference.getStringPreference(GuestLoginActivity.this,"TOKEN"));
-
+Log.i("fbtoken","fbtoken"+ SharedPreference.getStringPreference(GuestLoginActivity.this,"TOKEN"));
                 return map;
             }
 

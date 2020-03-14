@@ -47,7 +47,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
 
     @Override
-    public void onCreate() {
+    public void onCreate()
+    {
         super.onCreate();
     }
 
@@ -80,7 +81,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         Log.e("djcdbcbdc", "getData " + getData.toString());
         Log.e("djcdbcbdc", "getData " + getData);
 
-        Log.e("djcdbcbdc", "notification " + notification.toString());
+//       Log.e("djcdbcbdc", "notification " + notification.toString());
         Log.e("djcdbcbdc", "notification " + notification);
 
         // Check if message contains a data payload.

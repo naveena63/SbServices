@@ -135,7 +135,9 @@ final  String mobile=mobile_number.getText().toString();
                 Map<String,String> map= new HashMap<>();
                 map.put("token","c0304a62dd289bdc7364fb974c2091f6");
                 map.put("mobile",mobile);
-                map.put("fcm_token", SharedPreference.getStringPreference(GuestOtpActivity.this,"TOKEN"));
+                map.put("fcm_token",SharedPreference.getStringPreference(GuestOtpActivity.this,"TOKEN"));
+Log.i("guesttoken",SharedPreference.getStringPreference(GuestOtpActivity.this,"TOKEN"));
+
 
                 return map;
             }
