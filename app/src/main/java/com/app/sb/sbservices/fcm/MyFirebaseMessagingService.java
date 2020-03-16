@@ -18,6 +18,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.app.sb.sbservices.DescriptionActivity.MainActivity;
+import com.app.sb.sbservices.GuestLoginActivity;
 import com.app.sb.sbservices.R;
 import com.app.sb.sbservices.Utils.SharedPreference;
 import com.bumptech.glide.Glide;
@@ -236,7 +237,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             }
           else {
                 Log.e("fvhbfhvbfhb", "fvhbfbhb " + "others");
-                intent = new Intent(this, MainActivity.class);
+                intent = new Intent(this, GuestLoginActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             }
 
