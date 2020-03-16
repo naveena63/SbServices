@@ -6,23 +6,24 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca8f674d-e60e-4304-9eb7-527758753081" name="Default Changelist" comment="">
+    <list default="true" id="e4c640a0-6030-4fe7-9a6f-0e754d26682d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/GuestLoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/GuestLoginActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/GuestOtpActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/GuestOtpActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/User/OTPActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/User/OTPActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/fcm/MyFirebaseMessagingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/fcm/MyFirebaseMessagingService.java" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/build/classes/" />
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/app/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,37 +31,46 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_XL_API_29" />
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$">
-      <ProjectState />
-    </projectState>
-  </component>
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <task path="$PROJECT_DIR$">
-          <activation />
-        </task>
-        <projects_view>
-          <tree_state>
-            <expand />
-            <select />
-          </tree_state>
-        </projects_view>
+        <projects_view />
       </state>
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/TimeAndDate/HorizontalPickerAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="203" column="55" selection-start-line="203" selection-start-column="55" selection-end-line="203" selection-end-column="55" />
+              <folding>
+                <element signature="e#6564#6565#0" expanded="true" />
+                <element signature="e#6633#6634#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/Menu/FqsActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="79" selection-start-line="79" selection-end-line="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/fcm/MyFirebaseMessagingService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-355">
-              <caret line="88" column="20" lean-forward="true" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="21" />
+            <state relative-caret-position="357">
+              <caret line="217" lean-forward="true" selection-start-line="217" selection-end-line="217" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1519#1520#0" expanded="true" />
-                <element signature="e#1551#1552#0" expanded="true" />
+                <element signature="e#1523#1524#0" expanded="true" />
+                <element signature="e#1555#1556#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,128 +78,72 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="resourceFile" />
-        <option value="layoutResourceFile" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>pass</find>
-      <find>pas</find>
-      <find>storePassword</find>
-      <find>st</find>
-      <find>store</find>
-      <find>stor</find>
-      <find>storep</find>
-      <find>btn_sign_in</find>
-      <find>login_button</find>
-      <find>get_</find>
-      <find>ratingBar</find>
-      <find>com.app.AsheshaTech.sbservices</find>
-      <find>faqs</find>
-      <find>datePicker</find>
-      <find>remove</find>
-      <find>fireba</find>
-      <find>buttonLogin</find>
-      <find>dchvbdgvcgdvc</find>
-      <find>LAUNCHER</find>
-      <find>gues</find>
-      <find>responseGuest</find>
-      <find>mobileNumber</find>
-      <find>fb</find>
-      <find>dcjdncjndc</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>com.app.sb.sbservices</replace>
-    </replaceStrings>
-  </component>
-  <component name="GenerateSignedApkSettings">
-    <option name="EXPORT_PRIVATE_KEY" value="false" />
-    <option name="KEY_STORE_PATH" value="C:\SbServices\sbservices.jks" />
-    <option name="KEY_ALIAS" value="AndroidDebugKey" />
-    <option name="BUILD_TARGET_KEY" value="apk" />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="PUSH_TAGS">
-      <GitPushTagMode />
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/TimeAndDate/HorizontalPickerRecyclerView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/TimeAndDate/TimesoltActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/TimeAndDate/HorizontalPickerAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/Menu/QuestionAndAnswerModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/Utils/SharedPreference.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/SplashActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/User/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/User/RegisterActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/Menu/FqsActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/User/OTPActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/GuestLoginActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/GuestOtpActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/fcm/MyFirebaseMessagingService.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-3" />
-    <option name="y" value="5" />
-    <option name="width" value="1038" />
+    <option name="y" value="20" />
+    <option name="width" value="1040" />
     <option name="height" value="710" />
   </component>
-  <component name="ProjectId" id="1Yie96vaVDUmWolqofN701h0Gr8" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="sbservices" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="sbservices" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="sbservices" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="sbservices" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sbservices" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="sbservices" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="TimeAndDate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sbservices" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="sbservices" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="DEBUGGABLE_DEVICE" value="Pixel_XL_API_29 [emulator-5554]" />
-    <property name="DEBUGGABLE_PROCESS" value="com.app.sb.sbservices" />
-    <property name="DEBUGGER_ID" value="Auto" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_XL_API_29" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-03-05T10:56:38.421Z" />
-    <property name="ExportApk.ApkPath" value="D:\sbservices\SbServices\app" />
-    <property name="ExportApk.BuildVariants" value="release" />
-    <property name="ExportApk.SignV1" value="true" />
-    <property name="ExportApk.SignV2" value="true" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-03-16T05:31:45.809Z" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="SHOW_ALL_PROCESSES" value="false" />
-    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ByjuCloneApp-master" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.17" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
-  </component>
-  <component name="RecentsManager">
-    <key name="android.template.packageName">
-      <recent name="com.app.sb.sbservices.DescriptionActivity" />
-      <recent name="com.app.sb.sbservices.Menu" />
-      <recent name="com.app.asheshaTech.sbservices.Menu" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.app.sb.sbservices" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\sbservices\app\src\main\java\com\app\sb\sbservices\Utils" />
-      <recent name="D:\sbservices\app\src\main\java\com\app\sb\sbservices\fcm" />
-      <recent name="D:\android projects\sbservices\SbServices\app" />
-      <recent name="D:\android projects\sbservices\SbServices\app\src" />
-      <recent name="D:\sbservices\SbServices\app" />
-    </key>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -203,116 +157,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android App.app">
+  <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EarnCreditsActivity" type="AndroidRunConfigurationType" factoryName="Android App" temporary="true">
-      <module name="app" />
-      <option name="DEPLOY" value="true" />
-      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
-      <option name="DEPLOY_AS_INSTANT" value="false" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="specific_activity" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Hybrid>
-      <Java />
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Native>
-      <Profilers>
-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="com.app.sb.sbservices.ReferalId.EarnCreditsActivity" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OTPActivity" type="AndroidRunConfigurationType" factoryName="Android App" temporary="true">
-      <module name="app" />
-      <option name="DEPLOY" value="true" />
-      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
-      <option name="DEPLOY_AS_INSTANT" value="false" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="specific_activity" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Hybrid>
-      <Java />
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Native>
-      <Profilers>
-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="com.app.sb.sbservices.User.OTPActivity" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
@@ -370,362 +218,50 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Android App.OTPActivity" />
-        <item itemvalue="Android App.EarnCreditsActivity" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ca8f674d-e60e-4304-9eb7-527758753081" name="Default Changelist" comment="" />
-      <created>1580470533109</created>
+      <changelist id="e4c640a0-6030-4fe7-9a6f-0e754d26682d" name="Default Changelist" comment="" />
+      <created>1584335891656</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1580470533109</updated>
+      <updated>1584335891656</updated>
     </task>
-    <task id="LOCAL-00001" summary="sb">
-      <created>1580477154405</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1580477154405</updated>
-    </task>
-    <task id="LOCAL-00002" summary="sb">
-      <created>1580729720481</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1580729720481</updated>
-    </task>
-    <task id="LOCAL-00003" summary="sb">
-      <created>1581074471845</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1581074471846</updated>
-    </task>
-    <task id="LOCAL-00004" summary="sb">
-      <created>1581074521264</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1581074521264</updated>
-    </task>
-    <task id="LOCAL-00005" summary="sb">
-      <created>1581075641476</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1581075641476</updated>
-    </task>
-    <task id="LOCAL-00006" summary="sb">
-      <created>1581076386005</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1581076386005</updated>
-    </task>
-    <task id="LOCAL-00007" summary="sb">
-      <created>1581679791323</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1581679791323</updated>
-    </task>
-    <task id="LOCAL-00008" summary="sb">
-      <created>1582801946580</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1582801946580</updated>
-    </task>
-    <task id="LOCAL-00009" summary="sb">
-      <created>1582802087266</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1582802087266</updated>
-    </task>
-    <task id="LOCAL-00010" summary="sb">
-      <created>1582975013756</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1582975013756</updated>
-    </task>
-    <task id="LOCAL-00011" summary="sb">
-      <created>1583405211257</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1583405211257</updated>
-    </task>
-    <task id="LOCAL-00012" summary="sb">
-      <created>1583409572663</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1583409572663</updated>
-    </task>
-    <task id="LOCAL-00013" summary="sb">
-      <created>1583470395469</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1583470395469</updated>
-    </task>
-    <task id="LOCAL-00014" summary="sb">
-      <created>1583470430167</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1583470430167</updated>
-    </task>
-    <task id="LOCAL-00015" summary="sb">
-      <created>1583476801651</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1583476801651</updated>
-    </task>
-    <task id="LOCAL-00016" summary="sb">
-      <created>1583838943079</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1583838943079</updated>
-    </task>
-    <task id="LOCAL-00017" summary="sb">
-      <created>1583839042052</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1583839042052</updated>
-    </task>
-    <task id="LOCAL-00018" summary="sb">
-      <created>1583839104694</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1583839104694</updated>
-    </task>
-    <task id="LOCAL-00019" summary="sb">
-      <created>1584014509459</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1584014509459</updated>
-    </task>
-    <task id="LOCAL-00020" summary="sb">
-      <created>1584014947069</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1584014947069</updated>
-    </task>
-    <task id="LOCAL-00021" summary="sb">
-      <created>1584101432791</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1584101432791</updated>
-    </task>
-    <task id="LOCAL-00022" summary="sb">
-      <created>1584102654366</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1584102654366</updated>
-    </task>
-    <option name="localTasksCounter" value="23" />
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1038" height="795" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49924585" weight="0.23210634" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.030674847" />
       <window_info id="Structure" order="3" side_tool="true" />
-      <window_info id="Build Variants" order="4" sideWeight="0.5007542" side_tool="true" weight="0.18711656" />
+      <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Favorites" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="0" weight="0.3514329" />
-      <window_info anchor="bottom" id="TODO" order="1" weight="0.32880846" />
+      <window_info anchor="bottom" id="Run" weight="0.43891403" />
+      <window_info anchor="bottom" id="Debug" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="TODO" order="1" />
       <window_info anchor="bottom" id="Android Profiler" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.22624435" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32880846" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5010225" side_tool="true" weight="0.54600304" />
-      <window_info anchor="bottom" id="Version Control" order="6" weight="0.32880846" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49795502" weight="0.32880846" />
-      <window_info anchor="bottom" id="Logcat" order="8" sideWeight="0.4989775" weight="0.4509804" />
-      <window_info anchor="bottom" id="Find" order="9" />
-      <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="right" id="Gradle" order="1" />
-      <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Preview" order="4" weight="0.32924336" />
-      <window_info anchor="right" id="Assistant" order="5" weight="0.32924336" />
-      <window_info anchor="right" id="Device File Explorer" order="6" side_tool="true" weight="0.32924336" />
+      <window_info anchor="bottom" id="Terminal" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" weight="0.32880846" />
+      <window_info anchor="bottom" id="Build" order="5" weight="0.21568628" />
+      <window_info active="true" anchor="bottom" id="Logcat" order="6" visible="true" weight="0.13423832" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Gradle" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
     </layout>
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="$PROJECT_DIR$" />
-    </ignored-roots>
-    <MESSAGE value="sb" />
-    <option name="LAST_COMMIT_MESSAGE" value="sb" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/User/OTPActivity.java</url>
-          <line>81</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/User/OTPActivity.java</url>
-          <line>80</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/User/OTPActivity.java</url>
-          <line>79</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/User/OTPActivity.java</url>
-          <line>76</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/User/OTPActivity.java</url>
-          <line>77</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/User/OTPActivity.java</url>
-          <line>122</line>
-          <properties />
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/User/OTPActivity.java</url>
-          <line>123</line>
-          <properties />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="evaluateExpression">
-      <expression>
-        <expression-string>SharedPreference.getStringPreference(GuestOtpActivity.this,&quot;TOKEN&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Request.Method.POST</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>new StringRequest(Request.Method.POST, AppConstants.Guest_Register, new Response.Listener&lt;String&gt;()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>defaultvalue</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>sp.getString(&quot;userid&quot;, &quot;defaultvalue&quot;);</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>userid</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>sp.getString(&quot;userid&quot;, &quot;defaultvalue&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="500" column="13" selection-start-line="500" selection-start-column="13" selection-end-line="500" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/TimeAndDate/DatePickerListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/TimeAndDate/Day.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -733,303 +269,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/TimeAndDate/HorizontalPicker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="73" column="29" lean-forward="true" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
-          <folding>
-            <element signature="e#2226#2227#0" expanded="true" />
-            <element signature="e#2278#2279#0" expanded="true" />
-            <element signature="e#5666#5667#0" expanded="true" />
-            <element signature="e#5693#5694#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/TimeAndDate/HorizontalPickerListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/TimeAndDate/OnItemClickedListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/TimeAndDate/TImeSlotClickListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/TimeAndDate/TimeSlotModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/TimeAndDate/HorizontalPickerRecyclerView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="85" column="13" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/TimeAndDate/HorizontalPickerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="204" column="32" lean-forward="true" selection-start-line="204" selection-start-column="32" selection-end-line="204" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/Menu/QuestionAndAnswerModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/Menu/QuesAnsAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/services/ServicesListModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
-          <folding>
-            <element signature="e#411#412#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#1037#1038#0" expanded="true" />
-            <element signature="e#1083#1084#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/Packages/PackagesActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1666">
-          <caret line="138" column="43" selection-start-line="138" selection-start-column="43" selection-end-line="138" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/Menu/FaqsAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="54" column="88" selection-start-line="54" selection-start-column="88" selection-end-line="54" selection-end-column="88" />
-          <folding>
-            <element signature="e#2490#2491#0" expanded="true" />
-            <element signature="e#2537#2538#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/faq_item.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/MyFcmTextMessagingService.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/sb_services_logo.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/content/SharedPreferences.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="46" column="62" selection-start-line="46" selection-start-column="62" selection-end-line="46" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/java/lang/Throwable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="823">
-          <caret line="625" column="16" selection-start-line="625" selection-start-column="16" selection-end-line="625" selection-end-column="16" />
-          <folding>
-            <element signature="e#26988#26989#0" expanded="true" />
-            <element signature="e#27031#27032#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="50" column="41" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="61" column="36" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/User/RegisterActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="195" column="90" selection-start-line="195" selection-start-column="90" selection-end-line="195" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/User/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-234">
-          <caret line="171" column="103" selection-start-line="171" selection-start-column="15" selection-end-line="171" selection-end-column="103" />
+          <caret line="203" column="55" selection-start-line="203" selection-start-column="55" selection-end-line="203" selection-end-column="55" />
+          <folding>
+            <element signature="e#6564#6565#0" expanded="true" />
+            <element signature="e#6633#6634#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/Menu/FqsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
+        <state relative-caret-position="190">
           <caret line="79" selection-start-line="79" selection-end-line="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/TimeAndDate/TimesoltActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="259" column="95" selection-start-line="259" selection-start-column="95" selection-end-line="259" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/TimeAndDate/TimeSlotAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="34" column="76" lean-forward="true" selection-start-line="34" selection-start-column="76" selection-end-line="34" selection-end-column="76" />
-          <folding>
-            <element signature="e#3231#3232#0" expanded="true" />
-            <element signature="e#3274#3275#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/time_slot_list_item.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/SplashActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="98" column="52" lean-forward="true" selection-start-line="98" selection-start-column="52" selection-end-line="98" selection-end-column="52" />
-          <folding>
-            <element signature="e#5733#5799#0" expanded="true" />
-            <element signature="e#5834#5922#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/jre/jre/lib/rt.jar!/sun/misc/Unsafe.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="353" column="23" selection-start-line="353" selection-start-column="23" selection-end-line="353" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/User/OTPActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="124" column="32" selection-start-line="124" selection-start-column="23" selection-end-line="124" selection-end-column="32" />
-          <folding>
-            <element signature="e#2209#2210#0" expanded="true" />
-            <element signature="e#2260#2261#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_guest_login.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="97" column="45" selection-start-line="97" selection-start-column="33" selection-end-line="97" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="271" column="18" selection-start-line="271" selection-start-column="18" selection-end-line="271" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/GuestLoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6103">
-          <caret line="443" column="13" selection-start-line="443" selection-start-column="13" selection-end-line="443" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/GuestOtpActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1904">
-          <caret line="142" column="13" selection-start-line="142" selection-start-column="13" selection-end-line="142" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f81e47b36e6f9c8fc4b9774007d5a703/firebase-messaging-17.6.0/jars/classes.jar!/com/google/firebase/messaging/FirebaseMessagingService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3077">
-          <caret line="204" selection-start-line="204" selection-end-line="204" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/Utils/SharedPreference.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/GuestOtpGenerateActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="120" column="92" selection-start-line="120" selection-start-column="92" selection-end-line="120" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/Utils/AppConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="83" selection-start-line="45" selection-start-column="78" selection-end-line="45" selection-end-column="83" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/sb/sbservices/fcm/MyFirebaseMessagingService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-355">
-          <caret line="88" column="20" lean-forward="true" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="21" />
+        <state relative-caret-position="357">
+          <caret line="217" lean-forward="true" selection-start-line="217" selection-end-line="217" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1519#1520#0" expanded="true" />
-            <element signature="e#1551#1552#0" expanded="true" />
+            <element signature="e#1523#1524#0" expanded="true" />
+            <element signature="e#1555#1556#0" expanded="true" />
           </folding>
         </state>
       </provider>

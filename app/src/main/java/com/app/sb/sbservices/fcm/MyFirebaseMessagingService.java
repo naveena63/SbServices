@@ -222,7 +222,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             Log.e(TAG, data.toString());
 
 
-            if (newtag.equalsIgnoreCase("manikratna")) {
+            if (title.equalsIgnoreCase("manikratna")) {
 //                intent = new Intent(this, VedeoActivity.class);
 //                intent.putExtra("id", video_id);
 //                intent.putExtra("name", title);
