@@ -50,8 +50,10 @@ public class HorizontalPickerAdapter extends RecyclerView.Adapter<HorizontalPick
     private int itemWidth;
     private final OnItemClickedListener listener;
     private ArrayList<Day> items;
+    String stringblockedDate, status;
     Context context;
     private ArrayList<BlockedDates> blockedDates;
+
     public HorizontalPickerAdapter(int itemWidth, OnItemClickedListener listener, Context context, int daysToCreate, int offset, int mBackgroundColor, int mDateSelectedColor, int mDateSelectedTextColor, int mTodayDateTextColor, int mTodayDateBackgroundColor, int mDayOfWeekTextColor, int mUnselectedDayTextColor) {
         items = new ArrayList<>();
         blockedDates = new ArrayList<>();
@@ -98,26 +100,29 @@ public class HorizontalPickerAdapter extends RecyclerView.Adapter<HorizontalPick
             holder.tvDay.setBackgroundDrawable(getDaySelectedBackground(holder.itemView));
             holder.tvDay.setTextColor(mDateSelectedTextColor);
         } else if (item.isToday()) {
-            // holder.tvDay.setBackgroundDrawable(getDayTodayBackground(holder.itemView));
-            //  holder.tvDay.setTextColor(mTodayDateTextColor);
+             holder.tvDay.setBackgroundDrawable(getDayTodayBackground(holder.itemView));
+              holder.tvDay.setTextColor(mTodayDateTextColor);
         } else {
             holder.tvDay.setBackgroundColor(mBackgroundColor);
             holder.tvDay.setTextColor(mUnselectedDayTextColor);
         }
-
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "", new Response.Listener<String>() {
+/*
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://sbservices.in/api/get-blocked-booking-dates", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-
+                Log.i("df", "b,lockedresponse" + response);
                 try {
                     JSONArray jsonArray = new JSONArray(response);
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
-                        String blockedDate = jsonObject.getString("blockeddate");
-                        String status = jsonObject.getString("status");
+                        stringblockedDate = jsonObject.getString("blockeddate");
+                        status = jsonObject.getString("status");
                         String message = jsonObject.getString("message");
 
-
+                        if (item.getDay().equalsIgnoreCase(stringblockedDate)) {
+                            holder.tvDay.setText(stringblockedDate);
+                            holder.tvDay.setTextColor(Color.BLACK);
+                        }
 
                     }
                 } catch (JSONException e) {
@@ -138,7 +143,7 @@ public class HorizontalPickerAdapter extends RecyclerView.Adapter<HorizontalPick
             }
         };
         RequestQueue requestQueue = Volley.newRequestQueue(context);
-        requestQueue.add(stringRequest);
+        requestQueue.add(stringRequest);*/
 
     }
 
@@ -175,6 +180,7 @@ public class HorizontalPickerAdapter extends RecyclerView.Adapter<HorizontalPick
             tvDay.setWidth(itemWidth);
             tvWeekDay = (TextView) itemView.findViewById(R.id.tvWeekDay);
             itemView.setOnClickListener(this);
+
         }
 
         @Override
@@ -182,4 +188,6 @@ public class HorizontalPickerAdapter extends RecyclerView.Adapter<HorizontalPick
             listener.onClickView(v, getAdapterPosition());
         }
     }
+
+
 }
