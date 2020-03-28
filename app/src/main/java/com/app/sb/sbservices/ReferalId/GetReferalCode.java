@@ -31,7 +31,6 @@ public class GetReferalCode extends AppCompatActivity {
     TextView textViewrefid,textViewreferPoints;
     Button inviteButton;
     String refid;
-
     PrefManager prefManager;
 
     @Override

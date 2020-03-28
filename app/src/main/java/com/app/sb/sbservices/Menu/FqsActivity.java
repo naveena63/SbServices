@@ -48,6 +48,7 @@ public class FqsActivity extends AppCompatActivity {
         questionAndAnswerModelArrayList = new ArrayList<>();
         my_recycler_view.setLayoutManager(new LinearLayoutManager(FqsActivity.this));
         my_recycler_view.setHasFixedSize(true);
+
         getFaqs();
             }
 
@@ -69,32 +70,39 @@ public class FqsActivity extends AppCompatActivity {
                             ServicesListModel servicesListModel = new ServicesListModel();
                             String namecatrgry = json.getString("category_name");
                             String faq = json.getString("faq");
+
+                            Log.e("faq", "faq" + faq);
                             servicesListModel.setServiceName(namecatrgry);
 
 
-                            if (faq.equalsIgnoreCase("No Faq")) {
-                                //  Toast.makeText(FqsActivity.this, "", Toast.LENGTH_SHORT).show();
-                                noFaqs.setText("no faqs");
-                                noFaqs.setVisibility(View.VISIBLE);
-                            }else {
-                                JSONArray jsonArray1 = json.getJSONArray(faq);
-                                if(jsonArray1!=null&&jsonArray1.length()>0)
-                                {
-                                    for (int j = 0; j < jsonArray1.length(); j++)
-                                    {
-                                        JSONObject jsonObject2 = jsonArray1.getJSONObject(j);
-                                        String question = jsonObject2.getString("question");
-                                        String answer = jsonObject2.getString("answer");
-                                        questionAndAnswerModelArrayList.add(new QuestionAndAnswerModel(question, answer));
-                                        servicesListModel.setAllItemsInSection(questionAndAnswerModelArrayList);
-                                        servicesListModels.add(servicesListModel);
-                                    }
+                            JSONArray jsonArray1 = json.getJSONArray("faq");
+
+                                for (int j = 0; j < jsonArray1.length(); j++) {
+                                    JSONObject jsonObject2 = jsonArray1.getJSONObject(j);
+                                    String question = jsonObject2.getString("question");
+                                    String answer = jsonObject2.getString("answer");
+                                    questionAndAnswerModelArrayList.add(new QuestionAndAnswerModel(question, answer));
+                                    servicesListModel.setAllItemsInSection(questionAndAnswerModelArrayList);
+                                    servicesListModels.add(servicesListModel);
+
+                                if (questionAndAnswerModelArrayList.size() > 0) {
                                     faqsAdapter = new FaqsAdapter(servicesListModels);
                                     quesAnsAdapter = new QuesAnsAdapter(FqsActivity.this, questionAndAnswerModelArrayList);
                                     my_recycler_view.setAdapter(faqsAdapter);
+                                    faqsAdapter.notifyDataSetChanged();
+
+                                }
+                                else
+                                    {
+                                    noFaqs.setText("No Faqs");
+                                    noFaqs.setVisibility(View.VISIBLE);
+                                }
+                            }
+
+
                                 }
 
-                        }}
+
                     }
                 } catch (JSONException e)
                 {

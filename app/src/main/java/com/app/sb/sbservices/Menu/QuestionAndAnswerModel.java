@@ -9,6 +9,10 @@ public class QuestionAndAnswerModel {
         this.answer=answer;
     }
 
+    public QuestionAndAnswerModel() {
+
+    }
+
     public String getQuestion() {
         return question;
     }
