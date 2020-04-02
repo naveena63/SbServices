@@ -576,8 +576,7 @@ Log.i("fbtoken","fbtoken"+ SharedPreference.getStringPreference(GuestLoginActivi
 
             Log.d("email", "display email: " + acct.getEmail());
             Log.d("name", "display name: " + acct.getDisplayName());
-            Log.d("name", "Name: " + personName + ", email: " + email
-            );
+            Log.d("name", "Name: " + personName + ", email: " + email);
             txtName.setText(personName);
             txtEmail.setText(googleEmail);
             Toast.makeText(GuestLoginActivity.this, "success", Toast.LENGTH_SHORT).show();

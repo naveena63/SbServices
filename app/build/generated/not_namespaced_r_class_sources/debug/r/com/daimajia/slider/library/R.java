@@ -531,15 +531,15 @@ public final class R {
         public static final int src_over = 0x7f0a01ff;
         public static final int submit_area = 0x7f0a020e;
         public static final int tabMode = 0x7f0a0212;
-        public static final int textSpacerNoButtons = 0x7f0a021e;
-        public static final int title = 0x7f0a023b;
-        public static final int title_template = 0x7f0a023d;
-        public static final int topPanel = 0x7f0a0240;
-        public static final int up = 0x7f0a025b;
-        public static final int useLogo = 0x7f0a025f;
-        public static final int visible = 0x7f0a0271;
-        public static final int withText = 0x7f0a027e;
-        public static final int wrap_content = 0x7f0a0280;
+        public static final int textSpacerNoButtons = 0x7f0a021f;
+        public static final int title = 0x7f0a023c;
+        public static final int title_template = 0x7f0a023e;
+        public static final int topPanel = 0x7f0a0241;
+        public static final int up = 0x7f0a025c;
+        public static final int useLogo = 0x7f0a0260;
+        public static final int visible = 0x7f0a0272;
+        public static final int withText = 0x7f0a027f;
+        public static final int wrap_content = 0x7f0a0281;
     }
     public static final class integer {
         private integer() {}
@@ -573,14 +573,14 @@ public final class R {
         public static final int abc_search_dropdown_item_icons_2line = 0x7f0d0018;
         public static final int abc_search_view = 0x7f0d0019;
         public static final int abc_select_dialog_material = 0x7f0d001a;
-        public static final int indicator_layout = 0x7f0d007b;
-        public static final int render_type_default = 0x7f0d00b6;
-        public static final int render_type_text = 0x7f0d00b7;
-        public static final int select_dialog_item_material = 0x7f0d00b9;
-        public static final int select_dialog_multichoice_material = 0x7f0d00ba;
-        public static final int select_dialog_singlechoice_material = 0x7f0d00bb;
-        public static final int slider_layout = 0x7f0d00bc;
-        public static final int support_simple_spinner_dropdown_item = 0x7f0d00be;
+        public static final int indicator_layout = 0x7f0d007c;
+        public static final int render_type_default = 0x7f0d00b7;
+        public static final int render_type_text = 0x7f0d00b8;
+        public static final int select_dialog_item_material = 0x7f0d00ba;
+        public static final int select_dialog_multichoice_material = 0x7f0d00bb;
+        public static final int select_dialog_singlechoice_material = 0x7f0d00bc;
+        public static final int slider_layout = 0x7f0d00bd;
+        public static final int support_simple_spinner_dropdown_item = 0x7f0d00bf;
     }
     public static final class string {
         private string() {}

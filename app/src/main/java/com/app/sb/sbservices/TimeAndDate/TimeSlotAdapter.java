@@ -23,7 +23,7 @@ public class TimeSlotAdapter extends RecyclerView.Adapter<TimeSlotAdapter.ViewHo
 
     private List<TimeSlotModel> timeModelList;
     private TImeSlotClickListener tImeSlotClickListener;
-    TimeSlotAdapter(List<TimeSlotModel> timeModels,TImeSlotClickListener timeSlotClickListener) {
+    public TimeSlotAdapter(List<TimeSlotModel> timeModels,TImeSlotClickListener timeSlotClickListener) {
         this.timeModelList = timeModels;
         this.tImeSlotClickListener = timeSlotClickListener;
     }

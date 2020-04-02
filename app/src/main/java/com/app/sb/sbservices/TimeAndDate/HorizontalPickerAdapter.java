@@ -150,7 +150,7 @@ public class HorizontalPickerAdapter extends RecyclerView.Adapter<HorizontalPick
         public ViewHolder(View itemView) {
             super(itemView);
 
-            tvDay = (TextView) itemView.findViewById(R.id.tvDay);
+            tvDay = (TextView) itemView.findViewById(R.id.tvdate);
             tvDay.setWidth(itemWidth);
             tvWeekDay = (TextView) itemView.findViewById(R.id.tvWeekDay);
             itemView.setOnClickListener(this);

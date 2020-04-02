@@ -25,6 +25,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.app.sb.sbservices.Cart.CartActivity;
+import com.app.sb.sbservices.NewDate.DatesAndTimeActivity;
 import com.app.sb.sbservices.R;
 import com.app.sb.sbservices.TimeAndDate.TimesoltActivity;
 import com.app.sb.sbservices.Utils.ApiCallingFlow;
@@ -181,7 +182,7 @@ public class PackagesActivity extends AppCompatActivity implements PackageListen
     public void onClickAddToCart(PackageModel packagesListModel) {
         Bundle bundle = new Bundle();
         bundle.putSerializable("selected_package", packagesListModel);
-        Intent intent = new Intent(PackagesActivity.this, TimesoltActivity.class);
+        Intent intent = new Intent(PackagesActivity.this, DatesAndTimeActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
