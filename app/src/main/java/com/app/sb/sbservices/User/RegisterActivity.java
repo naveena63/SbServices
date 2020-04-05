@@ -149,11 +149,12 @@ public class RegisterActivity extends AppCompatActivity {
                                 String email = json.getString("email");
                                 String phone = json.getString("phone");
 
+
+
                                 prefManager.setUsername(name);
                                 prefManager.setPhoneNumber(phone);
                                 prefManager.setEmailId(email);
                                 Log.e("email_id", prefManager.getEmailId());
-
                                 String user_id = json.getString("user_id");
                                 SharedPreferences sp = getApplicationContext().
                                         getSharedPreferences(

@@ -76,8 +76,8 @@ getSupportActionBar().hide();
         String new_pwd = et_new.getText().toString();
         String change_pwd = et_change.getText().toString();
         StringRequest stringRequest = new StringRequest(Request.Method.POST, AppConstants.CHANGE_PASS,
-                new Response.Listener<String>() {
-
+                new Response.Listener<String>()
+                {
                     @Override
                     public void onResponse(String response) {
                         apiCallingFlow.onSuccessResponse();

@@ -53,6 +53,7 @@ public class FaqsAdapter extends RecyclerView.Adapter<FaqsAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
              holder.textServiceNAme.setText(servicesListModel.get(position).getServiceName());
+             holder.nofaqs.setText(servicesListModel.get(position).getNo_packages_available());
 
         final ArrayList singleSectionItems = servicesListModel.get(position).getAllItemsInSection();
 
@@ -71,13 +72,14 @@ public class FaqsAdapter extends RecyclerView.Adapter<FaqsAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
      RecyclerView recyclerView;
-        TextView textServiceNAme;
+        TextView textServiceNAme,nofaqs;
 
         ViewHolder(View itemView) {
             super(itemView);
 
           recyclerView=itemView.findViewById(R.id.recyclerView);
             textServiceNAme = itemView.findViewById(R.id.textviewserviceName);
+            nofaqs = itemView.findViewById(R.id.no_packages_available);
         }
     }
 }

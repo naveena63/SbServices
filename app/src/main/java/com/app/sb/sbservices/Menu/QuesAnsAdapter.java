@@ -17,8 +17,6 @@ public class QuesAnsAdapter extends RecyclerView.Adapter<QuesAnsAdapter.SingleIt
     private Context mContext;
 
 
-
-
     public QuesAnsAdapter(Context context, ArrayList<QuestionAndAnswerModel> itemsList) {
 
         this.mContext = context;
@@ -37,9 +35,8 @@ public class QuesAnsAdapter extends RecyclerView.Adapter<QuesAnsAdapter.SingleIt
     public void onBindViewHolder(SingleItemRowHolder holder, int i) {
 
         QuestionAndAnswerModel singleItem = itemsList.get(i);
-        String question = (itemsList.get(i).getQuestion());
-        String answer = (itemsList.get(i).getAnswer());
-
+        holder.question.setText(itemsList.get(i).getQuestion());
+        holder.answer.setText(itemsList.get(i).getAnswer());
 
 
     }
@@ -50,11 +47,13 @@ public class QuesAnsAdapter extends RecyclerView.Adapter<QuesAnsAdapter.SingleIt
     }
 
     public class SingleItemRowHolder extends RecyclerView.ViewHolder {
-TextView question,answer;
+        TextView question, answer, no_packages_available;
+
         public SingleItemRowHolder(View view) {
             super(view);
             question = view.findViewById(R.id.question);
             answer = view.findViewById(R.id.answer);
+            no_packages_available = view.findViewById(R.id.no_packages_available);
 
 
         }

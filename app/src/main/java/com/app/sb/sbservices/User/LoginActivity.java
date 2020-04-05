@@ -119,6 +119,7 @@ Button buttonLogin;
                                     prefManager.storeValue(AppConstants.APP_LOGIN_USER_NAME, json.getString("name"));
                                     prefManager.storeValue(AppConstants.APP_LOGIN_USER_EMAIL, json.getString("email"));
                                     prefManager.storeValue(AppConstants.APP_LOGIN_USER_MOBILE, json.getString("mobile"));
+                                    Log.e("phon", prefManager.getPhoneNumber());
                                     Toast.makeText(LoginActivity.this, "Success", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(LoginActivity.this, BottomNavActivity.class);
                                     startActivity(intent);

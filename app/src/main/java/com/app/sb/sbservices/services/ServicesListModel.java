@@ -10,6 +10,7 @@ public class ServicesListModel {
     String serviceImage;
     String inclusion;
     String exclusion;
+    String no_packages_available;
     private ArrayList<QuestionAndAnswerModel> allItemsInSection;
 
     public ArrayList<QuestionAndAnswerModel> getAllItemsInSection() {
@@ -41,6 +42,14 @@ public class ServicesListModel {
 
     public String getServiceName() {
         return serviceName;
+    }
+
+    public String getNo_packages_available() {
+        return no_packages_available;
+    }
+
+    public void setNo_packages_available(String no_packages_available) {
+        this.no_packages_available = no_packages_available;
     }
 
     public void setServiceName(String serviceName) {
