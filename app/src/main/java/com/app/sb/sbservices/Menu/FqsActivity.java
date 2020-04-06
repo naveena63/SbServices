@@ -80,8 +80,6 @@ public class FqsActivity extends AppCompatActivity {
                             Log.e("faq112", String.valueOf(jsonArray1));
                             if (jsonArray1.length()==0)
                             {
-
-
                                 Toast.makeText(FqsActivity.this, "no", Toast.LENGTH_SHORT).show();
                                 servicesListModel.setNo_packages_available("NoFaqs");
                                 Log.e("faq112", "nofaq");
